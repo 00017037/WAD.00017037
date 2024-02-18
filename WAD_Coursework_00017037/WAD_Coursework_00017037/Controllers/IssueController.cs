@@ -8,9 +8,9 @@ namespace WAD_Coursework_00017037.Controllers
     [ApiController]
     public class IssueController : Controller
     {
-        private readonly IssueRepository _issueRepository;
+        private readonly IRepository<Issue> _issueRepository;
 
-        public IssueController(IssueRepository issueRepository)
+        public IssueController(IRepository<Issue> issueRepository)
         {
             _issueRepository = issueRepository;
         }

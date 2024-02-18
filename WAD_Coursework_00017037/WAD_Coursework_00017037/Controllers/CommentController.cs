@@ -8,9 +8,9 @@ namespace WAD_Coursework_00017037.Controllers
     [ApiController]
     public class CommentController : Controller
     {
-        private readonly CommentRepository _commentRepository;
+        private readonly IRepository<Comment> _commentRepository;
 
-        public CommentController(CommentRepository commentRepository)
+        public CommentController(IRepository<Comment> commentRepository)
         {
             _commentRepository = commentRepository;
         }
