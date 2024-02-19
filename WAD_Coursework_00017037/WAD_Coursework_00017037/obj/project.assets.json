@@ -1369,6 +1369,18 @@
           }
         }
       },
+      "Microsoft.EntityFrameworkCore.Tools/8.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "8.0.2"
+        },
+        "compile": {
+          "lib/net8.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0/_._": {}
+        }
+      },
       "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
         "type": "package",
         "build": {
@@ -5062,6 +5074,31 @@
         "microsoft.entityframeworkcore.sqlserver.nuspec"
       ]
     },
+    "Microsoft.EntityFrameworkCore.Tools/8.0.2": {
+      "sha512": "PWy3X3Z1fnWlbU6pQMSnBvMwqERoKsriJ688TMl1xT2NyqcSk6/dX22eI5eV+qYXYmYna72Dq2u0P8tNZ6AYtg==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.tools/8.0.2",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net8.0/_._",
+        "microsoft.entityframeworkcore.tools.8.0.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.nuspec",
+        "tools/EntityFrameworkCore.PS2.psd1",
+        "tools/EntityFrameworkCore.PS2.psm1",
+        "tools/EntityFrameworkCore.psd1",
+        "tools/EntityFrameworkCore.psm1",
+        "tools/about_EntityFrameworkCore.help.txt",
+        "tools/init.ps1",
+        "tools/net461/any/ef.exe",
+        "tools/net461/win-arm64/ef.exe",
+        "tools/net461/win-x86/ef.exe",
+        "tools/netcoreapp2.0/any/ef.dll",
+        "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
+      ]
+    },
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
       "sha512": "Ckb5EDBUNJdFWyajfXzUIMRkhf52fHZOQuuZg/oiu8y7zDCVwD0iHhew6MnThjHmevanpxL3f5ci2TtHQEN6bw==",
       "type": "package",
@@ -8265,24 +8302,25 @@
       "Microsoft.EntityFrameworkCore >= 8.0.2",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.2",
+      "Microsoft.EntityFrameworkCore.Tools >= 8.0.2",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.1",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\botir\\.nuget\\packages\\": {}
+    "C:\\Users\\f_botirov\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\botir\\OneDrive\\Рабочий стол\\WAD.00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037.csproj",
+      "projectUniqueName": "C:\\Users\\f_botirov\\Desktop\\WAD.00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037.csproj",
       "projectName": "WAD_Coursework_00017037",
-      "projectPath": "C:\\Users\\botir\\OneDrive\\Рабочий стол\\WAD.00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037.csproj",
-      "packagesPath": "C:\\Users\\botir\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\botir\\OneDrive\\Рабочий стол\\WAD.00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037\\obj\\",
+      "projectPath": "C:\\Users\\f_botirov\\Desktop\\WAD.00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037.csproj",
+      "packagesPath": "C:\\Users\\f_botirov\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\f_botirov\\Desktop\\WAD.00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\botir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\f_botirov\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8302,6 +8340,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -8319,6 +8362,12 @@
             "version": "[8.0.2, )"
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
+            "target": "Package",
+            "version": "[8.0.2, )"
+          },
+          "Microsoft.EntityFrameworkCore.Tools": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
             "version": "[8.0.2, )"
           },
@@ -8350,7 +8399,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

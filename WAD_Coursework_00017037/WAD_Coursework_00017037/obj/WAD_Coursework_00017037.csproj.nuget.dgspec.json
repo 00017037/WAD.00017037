@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\botir\\OneDrive\\Рабочий стол\\WAD.00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037.csproj": {}
+    "C:\\Users\\f_botirov\\Desktop\\WAD.00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037.csproj": {}
   },
   "projects": {
-    "C:\\Users\\botir\\OneDrive\\Рабочий стол\\WAD.00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037.csproj": {
+    "C:\\Users\\f_botirov\\Desktop\\WAD.00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\botir\\OneDrive\\Рабочий стол\\WAD.00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037.csproj",
+        "projectUniqueName": "C:\\Users\\f_botirov\\Desktop\\WAD.00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037.csproj",
         "projectName": "WAD_Coursework_00017037",
-        "projectPath": "C:\\Users\\botir\\OneDrive\\Рабочий стол\\WAD.00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037.csproj",
-        "packagesPath": "C:\\Users\\botir\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\botir\\OneDrive\\Рабочий стол\\WAD.00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037\\obj\\",
+        "projectPath": "C:\\Users\\f_botirov\\Desktop\\WAD.00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037.csproj",
+        "packagesPath": "C:\\Users\\f_botirov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\f_botirov\\Desktop\\WAD.00017037\\WAD_Coursework_00017037\\WAD_Coursework_00017037\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\botir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\f_botirov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -51,6 +56,12 @@
               "version": "[8.0.2, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.2, )"
             },
@@ -82,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

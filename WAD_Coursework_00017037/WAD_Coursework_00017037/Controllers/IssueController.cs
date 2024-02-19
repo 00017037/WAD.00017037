@@ -4,9 +4,8 @@ using WAD_Coursework_00017037.Repositories;
 
 namespace WAD_Coursework_00017037.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class IssueController : Controller
+  
+    public class IssueController : ApiBaseController
     {
         private readonly IRepository<Issue> _issueRepository;
 

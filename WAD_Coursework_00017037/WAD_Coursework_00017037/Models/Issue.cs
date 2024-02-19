@@ -22,4 +22,5 @@ namespace WAD_Coursework_00017037.Models
         Critical
     }
 
+
 }

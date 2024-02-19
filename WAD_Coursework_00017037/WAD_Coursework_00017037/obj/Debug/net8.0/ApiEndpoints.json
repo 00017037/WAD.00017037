@@ -1,0 +1,160 @@
+[
+  {
+    "ContainingType": "WAD_Coursework_00017037.Controllers.CommentController",
+    "Method": "Create",
+    "RelativePath": "api/Comment/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "comment",
+        "Type": "WAD_Coursework_00017037.Models.Comment",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WAD_Coursework_00017037.Controllers.CommentController",
+    "Method": "Delete",
+    "RelativePath": "api/Comment/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WAD_Coursework_00017037.Controllers.CommentController",
+    "Method": "GetAll",
+    "RelativePath": "api/Comment/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WAD_Coursework_00017037.Controllers.CommentController",
+    "Method": "GetById",
+    "RelativePath": "api/Comment/GetById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WAD_Coursework_00017037.Controllers.CommentController",
+    "Method": "Update",
+    "RelativePath": "api/Comment/Update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "comment",
+        "Type": "WAD_Coursework_00017037.Models.Comment",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WAD_Coursework_00017037.Controllers.IssueController",
+    "Method": "Create",
+    "RelativePath": "api/Issue/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "issue",
+        "Type": "WAD_Coursework_00017037.Models.Issue",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WAD_Coursework_00017037.Controllers.IssueController",
+    "Method": "Delete",
+    "RelativePath": "api/Issue/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WAD_Coursework_00017037.Controllers.IssueController",
+    "Method": "GetAll",
+    "RelativePath": "api/Issue/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WAD_Coursework_00017037.Controllers.IssueController",
+    "Method": "GetById",
+    "RelativePath": "api/Issue/GetById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WAD_Coursework_00017037.Controllers.IssueController",
+    "Method": "Update",
+    "RelativePath": "api/Issue/Update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "issue",
+        "Type": "WAD_Coursework_00017037.Models.Issue",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
