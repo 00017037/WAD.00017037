@@ -1,6 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Url } from '../enums/url.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -12,21 +13,36 @@ export class ApiClientService {
   getById<T>(url:string,id:number):Observable<T>{
     const httParams = new HttpParams()
     httParams.set('id',id);
+    url = this.generateUrl(url,Url.GetById)
     return this.httpClient.get<T>(url,{params:httParams})
   }
 
+  create<T>(url:string,body:T):Observable<T>{
+    url = this.generateUrl(url,Url.Create)
+    return this.httpClient.post<T>(url,body)
+
+
+  }
+
   getAll<T>(url:string):Observable<T[]>{
+    url = this.generateUrl(url,Url.GetAll)
      return this.httpClient.get<T[]>(url);
   }
 
   deleteByID(id:number,url:string) {
+    url = this.generateUrl(url,Url.Delete)
     const params = new HttpParams().set('id',id)
     return this.httpClient.delete(url,{params});
   }
 
-  updateByID<T>(id:number,url:string,body:T):Observable<T>{
+  updateByID<T>(id:number,url:string,body:Partial<T>):Observable<T>{
+    url = this.generateUrl(url,Url.Update)
     const params = new HttpParams().set('id',id)
     return this.httpClient.put<T>(url,body,{params});
-
   }
+
+  generateUrl(...params:(string|number)[]):string{
+    return params.join('/')
+  }
+
 }

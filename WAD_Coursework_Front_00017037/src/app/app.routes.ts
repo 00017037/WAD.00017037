@@ -12,12 +12,10 @@ export const routes: Routes = [
       {
         path:'issues',
         component: IssuesComponent,
-        children:[
-          {
-            path:':id',
-            component:IssueDetailsComponent
-          }
-        ]
+      },
+      {
+        path:'issues/:id',
+        component:IssueDetailsComponent
       }
 ];
 
