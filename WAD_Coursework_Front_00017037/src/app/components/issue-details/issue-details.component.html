@@ -1,13 +1,16 @@
-<div class="card-container">
-  <div *ngFor="let issue of issues" class="card" [ngClass]="getSeverityClass(issue.severity)">
-    <div class="card-header">
-      <h3>{{ issue.title }}</h3>
-    </div>
-    <div class="card-body">
-      <p><strong>ID:</strong> {{ issue.id }}</p>
-      <p><strong>Description:</strong> {{ issue.description }}</p>
-      <p><strong>Created At:</strong> {{ issue.createdAt | date }}</p>
-      <p><strong>Severity:</strong> {{ issue.severity }}</p>
+
+
+<div *ngIf="issue$ | async as issue" class="issue-details">
+  <h2>{{ issue.title }}</h2>
+  <div class="metadata">
+    <span class="date">Created At: {{ issue.createdAt | date:'medium' }}</span>
+  </div>
+  <p class="description">{{ issue.description }}</p>
+  <div class="comments">
+    <h3>Comments ({{ issue.comments.length }})</h3>
+    <div *ngFor="let comment of issue.comments" class="comment">
+      <div class="comment-text">{{ comment.text }}</div>
+      <div class="comment-metadata">Posted on {{ comment.createdAt | date:'medium' }}</div>
     </div>
   </div>
 </div>

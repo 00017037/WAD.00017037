@@ -1,33 +1,51 @@
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-}
+.issue-details {
+  .metadata {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
 
-.card {
-  width: 300px;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 5px;
-}
+    .date {
+      font-style: italic;
+    }
 
-.card-header {
-  background-color: #f0f0f0;
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
-}
+    .severity {
+      padding: 2px 8px;
+      border-radius: 4px;
+      color: #fff;
+      &.minor { background-color: #f0ad4e; }
+      &.major { background-color: #d9534f; }
+      &.critical { background-color: #d43f3a; }
+    }
+  }
 
-.card-body {
-  padding: 10px;
-}
+  .description {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
 
-.minor {
-  background-color: yellow;
-}
+  .comments {
+    margin-top: 40px;
 
-.major {
-  background-color: red;
-}
+    h3 {
+      margin-bottom: 10px;
+    }
 
-.critical {
-  background-color: violet;
+    .comment {
+      margin-bottom: 15px;
+      padding: 10px;
+      background-color: #f7f7f7;
+      border-left: 3px solid #d9534f;
+      border-radius: 5px;
+
+      .comment-text {
+        font-size: 16px;
+      }
+
+      .comment-metadata {
+        margin-top: 5px;
+        font-size: 14px;
+        font-style: italic;
+      }
+    }
+  }
 }

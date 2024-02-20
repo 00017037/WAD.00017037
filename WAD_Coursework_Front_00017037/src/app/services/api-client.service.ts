@@ -12,9 +12,9 @@ export class ApiClientService {
 
   getById<T>(url:string,id:number):Observable<T>{
     const httParams = new HttpParams()
-    httParams.set('id',id);
-    url = this.generateUrl(url,Url.GetById)
-    return this.httpClient.get<T>(url,{params:httParams})
+    url = this.generateUrl(url,Url.GetById,id);
+    console.log(url)
+    return this.httpClient.get<T>(url)
   }
 
   create<T>(url:string,body:T):Observable<T>{

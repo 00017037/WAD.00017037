@@ -1,0 +1,28 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto; /* Flex-grow, flex-shrink, and flex-basis */
+  min-height: 80vh; /* 80% of the viewport height */
+}
+
+.app-footer {
+  flex-shrink: 0;
+  text-align: center;
+  padding: 20px;
+  background-color: #333; /* Dark background for the footer */
+  color: #fff; /* White text color */
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

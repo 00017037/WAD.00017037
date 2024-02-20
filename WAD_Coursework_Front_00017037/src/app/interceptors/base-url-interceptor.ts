@@ -1,18 +1,16 @@
-import { Injectable } from '@angular/core';
-import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpInterceptorFn } from "@angular/common/http";
 
-@Injectable()
-export class BaseUrlInterceptor implements HttpInterceptor {
-  baseUrl = 'http://localhost:5187/api'
 
-  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+// Define the base URL
+const baseUrl = 'http://localhost:5187/api';
 
-    // Only prepend the base URL if the request - is not already absolute
-    if (!request.url.startsWith('http')) {
-      const apiReq = request.clone({ url: `${this.baseUrl}/${request.url}` });
-      return next.handle(apiReq);
-    }
-    return next.handle(request);
+export const baseUrlInterceptor:HttpInterceptorFn = (request, next) => {
+  // Check if the URL is already absolute
+  if (!request.url.startsWith('http')) {
+    // Prepend the base URL to the request URL if it's not absolute
+    const apiReq = request.clone({ url: `${baseUrl}/${request.url}` });
+    return next(apiReq);
   }
+  // For absolute URLs, proceed without modification
+  return next(request);
 }
