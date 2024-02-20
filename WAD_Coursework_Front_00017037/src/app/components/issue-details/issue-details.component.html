@@ -1,1 +1,13 @@
-<p>issue-details works!</p>
+<div class="card-container">
+  <div *ngFor="let issue of issues" class="card" [ngClass]="getSeverityClass(issue.severity)">
+    <div class="card-header">
+      <h3>{{ issue.title }}</h3>
+    </div>
+    <div class="card-body">
+      <p><strong>ID:</strong> {{ issue.id }}</p>
+      <p><strong>Description:</strong> {{ issue.description }}</p>
+      <p><strong>Created At:</strong> {{ issue.createdAt | date }}</p>
+      <p><strong>Severity:</strong> {{ issue.severity }}</p>
+    </div>
+  </div>
+</div>

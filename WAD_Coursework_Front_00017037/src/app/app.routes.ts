@@ -1,13 +1,14 @@
 import { Routes } from '@angular/router';
 import { IssuesComponent } from './components/issues/issues.component';
 import { IssueDetailsComponent } from './components/issue-details/issue-details.component';
-import { AppComponent } from './app.component';
 
 export const routes: Routes = [
-  {
-    path:'',
-    component: AppComponent,
-    children: [
+     {
+      path:'',
+      redirectTo:'issues',
+      pathMatch:'full',
+     },
+
       {
         path:'issues',
         component: IssuesComponent,
@@ -18,8 +19,5 @@ export const routes: Routes = [
           }
         ]
       }
-    ]
-  },
-
 ];
 

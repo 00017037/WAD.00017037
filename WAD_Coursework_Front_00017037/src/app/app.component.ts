@@ -5,11 +5,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { IssueDetailsComponent } from './components/issue-details/issue-details.component';
 import { IssuesComponent } from './components/issues/issues.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,HeaderComponent,FooterComponent,IssueDetailsComponent,IssuesComponent],
+  imports: [CommonModule, RouterOutlet,HeaderComponent,FooterComponent,IssueDetailsComponent,IssuesComponent,HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

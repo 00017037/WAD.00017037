@@ -1,0 +1,33 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.card-header {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.minor {
+  background-color: yellow;
+}
+
+.major {
+  background-color: red;
+}
+
+.critical {
+  background-color: violet;
+}
