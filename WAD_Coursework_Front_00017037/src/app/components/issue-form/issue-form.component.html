@@ -1,1 +1,37 @@
-<p>issue-form works!</p>
+<h1 mat-dialog-title>{{ data.isEditMode ? "Edit" : "Add" }} Issue</h1>
+
+<div mat-dialog-content>
+  <form [formGroup]="issueForm" novalidate class="issue-form">
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" />
+      <mat-error *ngIf="issueForm.get('title')?.hasError('required')"
+        >Title is required</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+      <mat-error *ngIf="issueForm.get('description')?.hasError('required')"
+        >Description is required</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Severity</mat-label>
+      <mat-select formControlName="severity">
+        <mat-option
+          *ngFor="let severity of severities"
+          [value]="severity.value"
+          >{{ severity.label }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+    <!-- Add form fields for comments if needed -->
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="close()">Cancel</button>
+  <button mat-button (click)="save()" [disabled]="!issueForm.valid">
+    Save
+  </button>
+</div>

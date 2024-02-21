@@ -1,6 +1,7 @@
 <h2>Issue List</h2>
 <div class="card-container">
-  <div *ngFor="let issue of issues" [appSeverity]="issue.severity" class="card">
+  @for (issue of issues$|async;track issue.id){
+  <div [appSeverity]="issue.severity" class="card">
     <div class="card-header">
       <h3>{{ issue.title }}</h3>
     </div>
@@ -8,14 +9,24 @@
       <div class="issue-info">
         <p><strong>ID:</strong> {{ issue.id }}</p>
         <p><strong>Description:</strong> {{ issue.description }}</p>
-        <p><strong>Created At:</strong> {{ issue.createdAt | date:'dd.mm.yyyy' }}</p>
+        <p>
+          <strong>Created At:</strong>
+          {{ issue.createdAt | date : "dd.mm.yyyy" }}
+        </p>
       </div>
 
       <div class="actions">
-        <button [routerLink]="[issue.id]"  mat-raised-button color="primary" class='btn'mat-button>View Details</button>
-     </div>
+        <button
+          [routerLink]="[issue.id]"
+          mat-raised-button
+          color="primary"
+          class="btn"
+          mat-button
+        >
+          View Details
+        </button>
+      </div>
     </div>
-
-
   </div>
+  }
 </div>

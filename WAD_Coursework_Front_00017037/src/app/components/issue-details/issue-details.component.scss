@@ -1,51 +1,63 @@
+/* Global styles.css or component-specific CSS file */
 .issue-details {
-  .metadata {
+  border-left: 5px solid #007bff; /* Blue border for visual interest */
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9; /* Light background for the issue card */
+}
+
+.issue-title {
+  color: #333; /* Dark color for contrast */
+}
+
+.metadata {
+  display: flex;
+  justify-content: space-between;
+
+  color: #666; /* Lighter text for metadata */
+  font-style: italic;
+
+  .actions {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
-
-    .date {
-      font-style: italic;
-    }
-
-    .severity {
-      padding: 2px 8px;
-      border-radius: 4px;
-      color: #fff;
-      &.minor { background-color: #f0ad4e; }
-      &.major { background-color: #d9534f; }
-      &.critical { background-color: #d43f3a; }
-    }
-  }
-
-  .description {
-    margin-bottom: 20px;
-    font-size: 18px;
-  }
-
-  .comments {
-    margin-top: 40px;
-
-    h3 {
-      margin-bottom: 10px;
-    }
-
-    .comment {
-      margin-bottom: 15px;
-      padding: 10px;
-      background-color: #f7f7f7;
-      border-left: 3px solid #d9534f;
-      border-radius: 5px;
-
-      .comment-text {
-        font-size: 16px;
-      }
-
-      .comment-metadata {
-        margin-top: 5px;
-        font-size: 14px;
-        font-style: italic;
-      }
-    }
   }
 }
+
+.description {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: white; /* White background to highlight the description */
+  border: 1px solid #ddd; /* Adding a border to the description box */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.comments {
+  margin-top: 20px;
+}
+
+.comment {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f0f0f0; /* Different background for comments */
+  border-radius: 4px; /* Rounded corners for comment boxes */
+  .info {
+    .comment-text {
+      color: #333;
+    }
+
+    .comment-metadata {
+      color: #999;
+      font-size: 0.85rem;
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Additional styling can be added as per requirements */

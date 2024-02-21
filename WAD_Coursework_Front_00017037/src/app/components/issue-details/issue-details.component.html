@@ -1,16 +1,66 @@
-
-
 <div *ngIf="issue$ | async as issue" class="issue-details">
-  <h2>{{ issue.title }}</h2>
+  <h2 class="issue-title">{{ issue.title }}</h2>
   <div class="metadata">
-    <span class="date">Created At: {{ issue.createdAt | date:'medium' }}</span>
+    <span class="date"
+      >Created At: {{ issue.createdAt | date : "medium" }}</span
+    >
+    <div class="actions">
+      <button
+        mat-button
+        matTooltip="Primary"
+        color="primary"
+        (click)="editIssue(issue)"
+      >
+        Edit Issue
+      </button>
+      <button
+        mat-button
+        matTooltip="Warn"
+        color="warn"
+        (click)="deleteIssue(issue)"
+      >
+        Delete Issue
+      </button>
+    </div>
   </div>
   <p class="description">{{ issue.description }}</p>
   <div class="comments">
     <h3>Comments ({{ issue.comments.length }})</h3>
     <div *ngFor="let comment of issue.comments" class="comment">
-      <div class="comment-text">{{ comment.text }}</div>
-      <div class="comment-metadata">Posted on {{ comment.createdAt | date:'medium' }}</div>
+      <div class="info">
+        <div class="comment-text">{{ comment.text }}</div>
+        <div class="comment-metadata">
+          Posted on {{ comment.createdAt | date : "medium" }}
+        </div>
+      </div>
+
+      <div class="actions">
+        <button
+          mat-button
+          matTooltip="Primary"
+          color="primary"
+          (click)="editComment(comment)"
+        >
+          Edit
+        </button>
+        <button
+          mat-button
+          matTooltip="Warn"
+          color="warn"
+          (click)="deleteComment(comment)"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+    <div class="add-comment">
+      <button
+        mat-fab
+        color="primary"
+        aria-label="Example icon button with a delete icon"
+      >
+        <mat-icon>add</mat-icon>
+      </button>
     </div>
   </div>
 </div>
