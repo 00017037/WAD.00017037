@@ -23,7 +23,27 @@ builder.Services.AddDbContext<GeneralDBContext>(options =>
 
 builder.Services.AddScoped<IRepository<Comment>, CommentRepository>();
 builder.Services.AddScoped<IRepository<Issue>, IssueRepository>();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder => builder.WithOrigins("http://localhost:4200") // Specify the client origin here
+                          .AllowAnyMethod()
+                          .AllowAnyHeader()
+                          .AllowCredentials());
+});
+
 var app = builder.Build();
+app.UseCors("AllowSpecificOrigin");
+
+
+app.Use((context, next) =>
+{
+    context.Response.Headers.Add("Access-Control-Allow-Origin", "*");
+    context.Response.Headers.Add("Access-Control-Allow-Headers", "*");
+    context.Response.Headers.Add("Access-Control-Allow-Methods", "*");
+    return next();
+});
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -40,10 +40,11 @@ namespace WAD_Coursework_00017037.Repositories
             return await _context.Comments.FindAsync(id);
         }
 
-        public async Task UpdateAsync(Comment comment)
+        public async Task<Comment> UpdateAsync(Comment comment)
         {
             _context.Entry(comment).State = EntityState.Modified;
             await _context.SaveChangesAsync();
+            return comment;
         }
     }
 }

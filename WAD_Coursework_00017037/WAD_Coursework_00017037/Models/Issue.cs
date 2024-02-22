@@ -14,7 +14,7 @@ namespace WAD_Coursework_00017037.Models
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public Severity Severity { get; set; }
 
-        public virtual ICollection<Comment> Comments { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();
     }
 
     public enum Severity

@@ -13,6 +13,5 @@ namespace WAD_Coursework_00017037.Models
         public string Text { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
-        public virtual Issue Issue { get; set; }
     }
 }

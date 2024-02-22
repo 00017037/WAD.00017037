@@ -24,28 +24,35 @@ namespace WAD_Coursework_00017037.Repositories
 
         public async Task DeleteAsync(int id)
         {
-            var issue = await _context.Issues.FindAsync(id);
-            if (issue != null)
+            var issue = await _context.Issues.Include(i => i.Comments).FirstOrDefaultAsync(i => i.Id == id);
+            if (issue == null) return; 
+
+            if (issue.Comments.Any())
             {
-                _context.Issues.Remove(issue);
-                await _context.SaveChangesAsync();
+                _context.Comments.RemoveRange(issue.Comments);
             }
+
+            // Then, delete the Issue itself
+            _context.Issues.Remove(issue);
+            await _context.SaveChangesAsync();
         }
 
         public async Task<IEnumerable<Issue>> GetAllAsync()
         {
-            return await _context.Issues.ToListAsync();
+            return await _context.Issues.Include(issue => issue.Comments).ToListAsync();
         }
-
         public async Task<Issue> GetByIDAsync(int id)
         {
-            return await _context.Issues.FindAsync(id);
+            return await _context.Issues
+                          .Include(issue => issue.Comments)
+                          .FirstOrDefaultAsync(issue => issue.Id == id);
         }
 
-        public async Task UpdateAsync(Issue issue)
+        public async Task<Issue> UpdateAsync(Issue issue)
         {
             _context.Entry(issue).State = EntityState.Modified;
             await _context.SaveChangesAsync();
+            return issue;
         }
     }
 }

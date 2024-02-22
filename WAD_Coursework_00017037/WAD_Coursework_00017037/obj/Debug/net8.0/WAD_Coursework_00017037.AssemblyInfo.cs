@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WAD_Coursework_00017037")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fdbcc87d5ef354ea62d6b6a18ae790e0341823c8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0f7eb37449b2d3eb9324f35a7b79336511d8e29")]
 [assembly: System.Reflection.AssemblyProductAttribute("WAD_Coursework_00017037")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WAD_Coursework_00017037")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

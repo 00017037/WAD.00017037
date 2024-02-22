@@ -33,17 +33,29 @@ namespace WAD_Coursework_00017037.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Comment comment)
         {
-            await _commentRepository.AddAsync(comment);
-            return CreatedAtAction(nameof(GetById), new { id = comment.Id }, comment);
+            // Create a new Comment object with only IssueId and Text
+            var newComment = new Comment
+            {
+                IssueId = comment.IssueId,
+                Text = comment.Text
+            };
+
+            await _commentRepository.AddAsync(newComment);
+            return CreatedAtAction(nameof(GetById), new { id = newComment.Id }, newComment);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, Comment comment)
+        public async Task<IActionResult> Update(int id, Comment updatedComment)
         {
-            if (id != comment.Id)
-                return BadRequest();
+            var existingComment = await _commentRepository.GetByIDAsync(id);
+            if (existingComment == null)
+            {
+                return NotFound();
+            }
 
-            await _commentRepository.UpdateAsync(comment);
+            existingComment.Text = updatedComment.Text;
+
+            await _commentRepository.UpdateAsync(existingComment);
             return NoContent();
         }
 
