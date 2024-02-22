@@ -13,7 +13,7 @@ import { IDialogData } from '../../interfaces/dialog-data.interface';
 import { IIssue } from '../../interfaces/issue.interface';
 import { MatButtonModule } from '@angular/material/button';
 import { IssuesClient } from '../../services/issues-client.service';
-import { take, tap } from 'rxjs';
+import { take, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-issue-form',
@@ -62,7 +62,12 @@ export class IssueFormComponent implements OnInit {
       ? this.updateIssue(issue)
       : this.createIssue(issue);
 
-    res$.pipe(tap((issue) => this.dialogRef.close(issue), take(1))).subscribe();
+    res$
+      .pipe(
+        tap((issue) => this.dialogRef.close(issue)),
+        take(1)
+      )
+      .subscribe();
   }
 
   updateIssue(issue: IIssue) {
@@ -73,5 +78,7 @@ export class IssueFormComponent implements OnInit {
     return this.issuesClient.createIssue(issue);
   }
 
-  close() {}
+  close() {
+    this.dialogRef.close();
+  }
 }

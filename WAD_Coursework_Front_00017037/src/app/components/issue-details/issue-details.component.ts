@@ -12,13 +12,17 @@ import {
   tap,
 } from 'rxjs';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { IDialogData } from '../../interfaces/dialog-data.interface';
+import {
+  ICommenDialogData,
+  IDialogData,
+} from '../../interfaces/dialog-data.interface';
 import { IssueFormComponent } from '../issue-form/issue-form.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { IComment } from '../../interfaces/comment..interface';
 import { MatButtonModule } from '@angular/material/button';
+import { CommentFormComponent } from '../comment-form/comment-form.component';
 
 @Component({
   selector: 'app-issue-details',
@@ -62,7 +66,35 @@ export class IssueDetailsComponent {
       item: issue,
     };
     const dialogRef = this.dialog.open(IssueFormComponent, { data });
-    return dialogRef
+    this.updateAfterDialogClose(dialogRef);
+  }
+
+  editComment(comment: IComment) {
+    const data: ICommenDialogData = {
+      isEditMode: true,
+      item: comment,
+      issueId: comment.issueId,
+    };
+    const dialogRef = this.dialog.open(CommentFormComponent, { data });
+
+    this.updateAfterDialogClose(dialogRef);
+  }
+
+  deleteComment(comment: IComment) {}
+
+  addComment(issueId: number) {
+    const data: ICommenDialogData = {
+      isEditMode: false,
+      issueId,
+    };
+    const dialogRef = this.dialog.open(CommentFormComponent, { data });
+    this.updateAfterDialogClose(dialogRef);
+  }
+
+  deleteIssue(issue: IIssue) {}
+
+  updateAfterDialogClose(dialogRef: MatDialogRef<any>) {
+    dialogRef
       .afterClosed()
       .pipe(
         tap(() => this.updateIssueAction$.next(true)),
@@ -70,12 +102,4 @@ export class IssueDetailsComponent {
       )
       .subscribe();
   }
-
-  editComment(comment: IComment) {}
-
-  deleteComment(comment: IComment) {}
-
-  addComment() {}
-
-  deleteIssue(issue: IIssue) {}
 }

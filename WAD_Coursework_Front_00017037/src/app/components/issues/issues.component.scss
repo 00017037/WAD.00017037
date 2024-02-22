@@ -14,7 +14,6 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   width: 300px;
-
 }
 
 .card-header {
@@ -52,14 +51,13 @@
 }
 
 .critical {
-  background-color: #d43f3a;
+  background-color: #c71fe4;
 }
-
 
 .actions {
   display: flex;
   justify-content: flex-end;
-  color:  white;
+  color: white;
 
   .btn {
     color: white;
@@ -70,5 +68,3 @@
   transform: translateY(-5px);
   transition: all 0.3s ease;
 }
-
-

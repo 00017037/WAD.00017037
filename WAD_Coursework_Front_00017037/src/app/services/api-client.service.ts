@@ -15,7 +15,7 @@ export class ApiClientService {
     return this.httpClient.get<T>(url);
   }
 
-  create<T>(url: string, body: T): Observable<T> {
+  create<T>(url: string, body: Partial<T>): Observable<T> {
     url = this.generateUrl(url, Url.Create);
     return this.httpClient.post<T>(url, body);
   }

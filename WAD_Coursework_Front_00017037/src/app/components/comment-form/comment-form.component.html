@@ -1,1 +1,17 @@
-<p>comment-form works!</p>
+<h1 mat-dialog-title>{{ data.isEditMode ? "Edit" : "Add" }} Comment</h1>
+
+<div matDialogContent>
+  <form [formGroup]="form">
+    <mat-form-field appearance="fill">
+      <mat-label>Comment</mat-label>
+      <textarea matInput formControlName="text"></textarea>
+      <mat-error *ngIf="form.get('text')?.hasError('required')"
+        >Comment is required</mat-error
+      >
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="close()">Cancel</button>
+  <button mat-button (click)="save()" [disabled]="!form.valid">Save</button>
+</div>

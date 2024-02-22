@@ -6,33 +6,28 @@ import { Url } from '../enums/url.enum';
 import { IComment } from '../interfaces/comment..interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CommentsClient {
+  constructor(private apiClient: ApiClientService) {}
 
-
-  constructor(private apiClient:ApiClientService) { }
-
-
-  getAllComments():Observable<IComment[]> {
-
+  getAllComments(): Observable<IComment[]> {
     return this.apiClient.getAll<IComment>(Url.Comment);
   }
 
-  getCommentById(id:number):Observable<IComment> {
-    return this.apiClient.getById<IComment>(Url.Comment,id);
+  getCommentById(id: number): Observable<IComment> {
+    return this.apiClient.getById<IComment>(Url.Comment, id);
   }
 
-  deleteCommentById(id:number):Observable<any> {
-    return this.apiClient.deleteByID(id,Url.Comment)
+  deleteCommentById(id: number): Observable<any> {
+    return this.apiClient.deleteByID(id, Url.Comment);
   }
 
-  updateCommentById(id:number,body:Partial<IComment>){
-    return this.apiClient.updateByID<IComment>(id,Url.Comment,body)
+  updateCommentById(id: number, body: Partial<IComment>) {
+    return this.apiClient.updateByID<IComment>(id, Url.Comment, body);
   }
 
-  createComment(id:number,body:IComment){
-    return this.apiClient.create<IComment>(Url.Comment,body)
+  createComment(body: Partial<IComment>) {
+    return this.apiClient.create<IComment>(Url.Comment, body);
   }
-
 }
