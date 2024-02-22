@@ -63,7 +63,21 @@
     color: white;
   }
 }
-/* Add hover effect */
+.header {
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+
+  .title {
+    font-size: larger;
+  }
+  .add-issue-btn {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+  }
+}
+
 .card:hover {
   transform: translateY(-5px);
   transition: all 0.3s ease;
