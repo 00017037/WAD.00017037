@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { IIssue, Severity } from '../../interfaces/issue.interface';
-import { CommonModule } from '@angular/common';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { CommonModule, Location } from '@angular/common';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { IssuesClient } from '../../services/issues-client.service';
 import {
   BehaviorSubject,
   Observable,
+  filter,
   shareReplay,
   switchMap,
   take,
@@ -14,6 +15,7 @@ import {
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import {
   ICommenDialogData,
+  IDeleteDialogData,
   IDialogData,
 } from '../../interfaces/dialog-data.interface';
 import { IssueFormComponent } from '../issue-form/issue-form.component';
@@ -23,6 +25,8 @@ import { MatListModule } from '@angular/material/list';
 import { IComment } from '../../interfaces/comment..interface';
 import { MatButtonModule } from '@angular/material/button';
 import { CommentFormComponent } from '../comment-form/comment-form.component';
+import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
+import { CommentsClient } from '../../services/comments-client.service';
 
 @Component({
   selector: 'app-issue-details',
@@ -43,7 +47,9 @@ export class IssueDetailsComponent {
   constructor(
     private issueClient: IssuesClient,
     private route: ActivatedRoute,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private commentsClient: CommentsClient,
+    private location: Location
   ) {}
 
   updateIssueAction$ = new BehaviorSubject(true);
@@ -80,7 +86,26 @@ export class IssueDetailsComponent {
     this.updateAfterDialogClose(dialogRef);
   }
 
-  deleteComment(comment: IComment) {}
+  deleteComment(comment: IComment) {
+    const data: IDeleteDialogData = {
+      title: 'Comment',
+    };
+
+    const dialogRef = this.dialog.open(ConfirmationDialogComponent, { data });
+    dialogRef
+      .afterClosed()
+      .pipe(
+        filter((isConfirmed) => isConfirmed),
+        switchMap(() => {
+          return this.commentsClient.deleteCommentById(comment.id);
+        }),
+        tap(() => {
+          this.updateIssueAction$.next(true);
+        }),
+        take(1)
+      )
+      .subscribe();
+  }
 
   addComment(issueId: number) {
     const data: ICommenDialogData = {
@@ -91,7 +116,24 @@ export class IssueDetailsComponent {
     this.updateAfterDialogClose(dialogRef);
   }
 
-  deleteIssue(issue: IIssue) {}
+  deleteIssue(issue: IIssue) {
+    const data: IDeleteDialogData = {
+      title: 'Issue',
+    };
+
+    const dialogRef = this.dialog.open(ConfirmationDialogComponent, { data });
+    dialogRef
+      .afterClosed()
+      .pipe(
+        filter((isConfirmed) => isConfirmed),
+        switchMap(() => {
+          return this.issueClient.deleteIssueById(issue.id);
+        }),
+        tap(() => this.location.back()),
+        take(1)
+      )
+      .subscribe();
+  }
 
   updateAfterDialogClose(dialogRef: MatDialogRef<any>) {
     dialogRef

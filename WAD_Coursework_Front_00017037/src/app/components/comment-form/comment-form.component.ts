@@ -9,7 +9,6 @@ import {
   IDialogData,
 } from '../../interfaces/dialog-data.interface';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { IDialog } from '../../interfaces/dialog-data.interface';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { CommonModule } from '@angular/common';
