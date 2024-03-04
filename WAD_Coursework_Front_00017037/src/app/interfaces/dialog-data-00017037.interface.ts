@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
-import { IComment } from './comment..interface';
-import { IIssue } from './issue.interface';
+import { IComment } from './comment-0001703.interface';
+import { IIssue } from './issue-00017037.interface';
 
 export interface IDialogData {
   item?: IIssue | IComment;

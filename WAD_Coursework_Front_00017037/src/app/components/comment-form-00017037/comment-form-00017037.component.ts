@@ -7,13 +7,13 @@ import {
 import {
   ICommenDialogData,
   IDialogData,
-} from '../../interfaces/dialog-data.interface';
+} from '../../interfaces/dialog-data-00017037.interface';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { CommonModule } from '@angular/common';
-import { IComment } from '../../interfaces/comment..interface';
-import { CommentsClient } from '../../services/comments-client.service';
+import { IComment } from '../../interfaces/comment-0001703.interface';
+import { CommentsClient00017037 } from '../../services/comments-client-00017037.service';
 import { take, tap } from 'rxjs';
 
 @Component({
@@ -26,18 +26,18 @@ import { take, tap } from 'rxjs';
     CommonModule,
     ReactiveFormsModule,
   ],
-  templateUrl: './comment-form.component.html',
-  styleUrl: './comment-form.component.scss',
+  templateUrl: './comment-form-00017037.component.html',
+  styleUrl: './comment-form-00017037.component.scss',
 })
-export class CommentFormComponent implements OnInit {
+export class Comment00017037Component implements OnInit {
   form = this.fb.group({
     text: ['', Validators.required],
   });
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: ICommenDialogData,
     private fb: FormBuilder,
-    private commentsClient: CommentsClient,
-    private dialogRef: MatDialogRef<CommentFormComponent>
+    private commentsClient: CommentsClient00017037,
+    private dialogRef: MatDialogRef<Comment00017037Component>
   ) {}
 
   ngOnInit(): void {

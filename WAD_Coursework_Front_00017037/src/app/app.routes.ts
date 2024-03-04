@@ -1,21 +1,20 @@
 import { Routes } from '@angular/router';
-import { IssuesComponent } from './components/issues/issues.component';
-import { IssueDetailsComponent } from './components/issue-details/issue-details.component';
+import { IssuesComponent } from './components/issues-00017037/issues-00017037.component';
+import { IssueDetails00017037Component } from './components/issue-details-00017037/issue-details-00017037.component';
 
 export const routes: Routes = [
-     {
-      path:'',
-      redirectTo:'issues',
-      pathMatch:'full',
-     },
+  {
+    path: '',
+    redirectTo: 'issues',
+    pathMatch: 'full',
+  },
 
-      {
-        path:'issues',
-        component: IssuesComponent,
-      },
-      {
-        path:'issues/:id',
-        component:IssueDetailsComponent
-      }
+  {
+    path: 'issues',
+    component: IssuesComponent,
+  },
+  {
+    path: 'issues/:id',
+    component: IssueDetails00017037Component,
+  },
 ];
-

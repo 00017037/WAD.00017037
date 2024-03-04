@@ -1,12 +1,12 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Url } from '../enums/url.enum';
+import { Url } from '../enums/url-00017037.enum';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ApiClientService {
+export class ApiClient00017037Service {
   constructor(private httpClient: HttpClient) {}
 
   getById<T>(url: string, id: number): Observable<T> {

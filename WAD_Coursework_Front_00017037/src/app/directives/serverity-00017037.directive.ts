@@ -1,13 +1,13 @@
 import { Directive, ElementRef, Input, Renderer2 } from '@angular/core';
-import { Severity } from '../interfaces/issue.interface';
+import { Severity } from '../interfaces/issue-00017037.interface';
 @Directive({
   selector: '[appSeverity]',
-  standalone:true
+  standalone: true,
 })
-export class SeverityDirective {
-  @Input('appSeverity') severity:Severity = Severity.minor;
+export class Severity00017037Directive {
+  @Input('appSeverity') severity: Severity = Severity.minor;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) { }
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   ngOnInit() {
     this.applySeverityStyle();

@@ -1,28 +1,28 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { IIssue, Severity } from '../../interfaces/issue.interface';
-import { SeverityDirective } from '../../directives/serverity.directive';
+import { IIssue, Severity } from '../../interfaces/issue-00017037.interface';
+import { Severity00017037Directive } from '../../directives/serverity-00017037.directive';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
-import { IssuesClient } from '../../services/issues-client.service';
+import { IssuesClient00017037 } from '../../services/issues-client-00017037.service';
 import { BehaviorSubject, Observable, switchMap, take, tap } from 'rxjs';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialog } from '@angular/material/dialog';
-import { IDialogData } from '../../interfaces/dialog-data.interface';
-import { IssueFormComponent } from '../issue-form/issue-form.component';
+import { IDialogData } from '../../interfaces/dialog-data-00017037.interface';
+import { IssueForm00017037Component } from '../issue-form-00017037/issue-form-00017037.component';
 
 @Component({
   selector: 'app-issues',
   standalone: true,
   imports: [
     CommonModule,
-    SeverityDirective,
+    Severity00017037Directive,
     MatButtonModule,
     RouterModule,
     MatIconModule,
   ],
-  templateUrl: './issues.component.html',
-  styleUrl: './issues.component.scss',
+  templateUrl: './issues-00017037.component.html',
+  styleUrl: './issues-00017037.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class IssuesComponent {
@@ -32,14 +32,17 @@ export class IssuesComponent {
     switchMap(() => this.issuesClient.getAllIssues())
   );
 
-  constructor(private issuesClient: IssuesClient, private dialog: MatDialog) {}
+  constructor(
+    private issuesClient: IssuesClient00017037,
+    private dialog: MatDialog
+  ) {}
 
   addIssue() {
     const data: IDialogData = {
       isEditMode: false,
     };
 
-    const dialogRef = this.dialog.open(IssueFormComponent, { data });
+    const dialogRef = this.dialog.open(IssueForm00017037Component, { data });
     dialogRef
       .afterClosed()
       .pipe(

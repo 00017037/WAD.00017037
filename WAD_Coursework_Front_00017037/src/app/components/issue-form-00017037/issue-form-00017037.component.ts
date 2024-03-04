@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { selectItems } from './severy-sel-items';
+import { selectItems } from './severy-sel-items-00017037';
 import { CommonModule } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
@@ -9,10 +9,10 @@ import {
   MatDialogModule,
   MatDialogRef,
 } from '@angular/material/dialog';
-import { IDialogData } from '../../interfaces/dialog-data.interface';
-import { IIssue } from '../../interfaces/issue.interface';
+import { IDialogData } from '../../interfaces/dialog-data-00017037.interface';
+import { IIssue } from '../../interfaces/issue-00017037.interface';
 import { MatButtonModule } from '@angular/material/button';
-import { IssuesClient } from '../../services/issues-client.service';
+import { IssuesClient00017037 } from '../../services/issues-client-00017037.service';
 import { take, tap } from 'rxjs/operators';
 
 @Component({
@@ -26,10 +26,10 @@ import { take, tap } from 'rxjs/operators';
     MatSelectModule,
     MatDialogModule,
   ],
-  templateUrl: './issue-form.component.html',
-  styleUrl: './issue-form.component.scss',
+  templateUrl: './issue-form-00017037.component.html',
+  styleUrl: './issue-form-00017037.component.scss',
 })
-export class IssueFormComponent implements OnInit {
+export class IssueForm00017037Component implements OnInit {
   severities = selectItems;
 
   issueForm = this.fb.group({
@@ -41,8 +41,8 @@ export class IssueFormComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     @Inject(MAT_DIALOG_DATA) public data: IDialogData,
-    private issuesClient: IssuesClient,
-    private dialogRef: MatDialogRef<IssueFormComponent>
+    private issuesClient: IssuesClient00017037,
+    private dialogRef: MatDialogRef<IssueForm00017037Component>
   ) {}
 
   ngOnInit(): void {

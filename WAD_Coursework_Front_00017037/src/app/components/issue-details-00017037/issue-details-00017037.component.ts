@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { IIssue, Severity } from '../../interfaces/issue.interface';
+import { IIssue, Severity } from '../../interfaces/issue-00017037.interface';
 import { CommonModule, Location } from '@angular/common';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
-import { IssuesClient } from '../../services/issues-client.service';
+import { IssuesClient00017037 } from '../../services/issues-client-00017037.service';
 import {
   BehaviorSubject,
   Observable,
@@ -17,38 +17,38 @@ import {
   ICommenDialogData,
   IDeleteDialogData,
   IDialogData,
-} from '../../interfaces/dialog-data.interface';
-import { IssueFormComponent } from '../issue-form/issue-form.component';
+} from '../../interfaces/dialog-data-00017037.interface';
+import { IssueForm00017037Component } from '../issue-form-00017037/issue-form-00017037.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
-import { IComment } from '../../interfaces/comment..interface';
+import { IComment } from '../../interfaces/comment-0001703.interface';
 import { MatButtonModule } from '@angular/material/button';
-import { CommentFormComponent } from '../comment-form/comment-form.component';
-import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
-import { CommentsClient } from '../../services/comments-client.service';
+import { Comment00017037Component } from '../comment-form-00017037/comment-form-00017037.component';
+import { ConfirmationDialog00017037Component } from '../confirmation-dialog-00017037/confirmation-dialog-00017037.component';
+import { CommentsClient00017037 } from '../../services/comments-client-00017037.service';
 
 @Component({
   selector: 'app-issue-details',
   standalone: true,
   imports: [
     CommonModule,
-    IssueFormComponent,
+    IssueForm00017037Component,
     MatButtonModule,
     MatIconModule,
     MatCardModule,
     MatListModule,
     MatButtonModule,
   ],
-  templateUrl: './issue-details.component.html',
-  styleUrl: './issue-details.component.scss',
+  templateUrl: './issue-details-00017037.component.html',
+  styleUrl: './issue-details-00017037.component.scss',
 })
-export class IssueDetailsComponent {
+export class IssueDetails00017037Component {
   constructor(
-    private issueClient: IssuesClient,
+    private issueClient: IssuesClient00017037,
     private route: ActivatedRoute,
     private dialog: MatDialog,
-    private commentsClient: CommentsClient,
+    private commentsClient: CommentsClient00017037,
     private location: Location
   ) {}
 
@@ -71,7 +71,7 @@ export class IssueDetailsComponent {
       isEditMode: true,
       item: issue,
     };
-    const dialogRef = this.dialog.open(IssueFormComponent, { data });
+    const dialogRef = this.dialog.open(IssueForm00017037Component, { data });
     this.updateAfterDialogClose(dialogRef);
   }
 
@@ -81,7 +81,7 @@ export class IssueDetailsComponent {
       item: comment,
       issueId: comment.issueId,
     };
-    const dialogRef = this.dialog.open(CommentFormComponent, { data });
+    const dialogRef = this.dialog.open(Comment00017037Component, { data });
 
     this.updateAfterDialogClose(dialogRef);
   }
@@ -91,7 +91,9 @@ export class IssueDetailsComponent {
       title: 'Comment',
     };
 
-    const dialogRef = this.dialog.open(ConfirmationDialogComponent, { data });
+    const dialogRef = this.dialog.open(ConfirmationDialog00017037Component, {
+      data,
+    });
     dialogRef
       .afterClosed()
       .pipe(
@@ -112,7 +114,7 @@ export class IssueDetailsComponent {
       isEditMode: false,
       issueId,
     };
-    const dialogRef = this.dialog.open(CommentFormComponent, { data });
+    const dialogRef = this.dialog.open(Comment00017037Component, { data });
     this.updateAfterDialogClose(dialogRef);
   }
 
@@ -121,7 +123,9 @@ export class IssueDetailsComponent {
       title: 'Issue',
     };
 
-    const dialogRef = this.dialog.open(ConfirmationDialogComponent, { data });
+    const dialogRef = this.dialog.open(ConfirmationDialog00017037Component, {
+      data,
+    });
     dialogRef
       .afterClosed()
       .pipe(
