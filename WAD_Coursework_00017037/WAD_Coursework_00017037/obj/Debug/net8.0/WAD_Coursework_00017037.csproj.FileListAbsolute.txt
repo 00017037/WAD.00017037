@@ -513,3 +513,4 @@ C:\Users\f_botirov\Desktop\WAD.00017037\WAD_Coursework_00017037\WAD_Coursework_0
 C:\Users\f_botirov\Desktop\WAD.00017037\WAD_Coursework_00017037\WAD_Coursework_00017037\obj\Debug\net8.0\WAD_Coursework_00017037.pdb
 C:\Users\f_botirov\Desktop\WAD.00017037\WAD_Coursework_00017037\WAD_Coursework_00017037\obj\Debug\net8.0\WAD_Coursework_00017037.genruntimeconfig.cache
 C:\Users\f_botirov\Desktop\WAD.00017037\WAD_Coursework_00017037\WAD_Coursework_00017037\obj\Debug\net8.0\ref\WAD_Coursework_00017037.dll
+C:\Users\botir\OneDrive\Рабочий стол\WAD.00017037\WAD_Coursework_00017037\WAD_Coursework_00017037\obj\Debug\net8.0\WAD_Coursework_00017037.sourcelink.json

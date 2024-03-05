@@ -21,8 +21,8 @@ builder.Services.AddDbContext<GeneralDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServerConnection")));
 
 
-builder.Services.AddScoped<IRepository<Comment>, CommentRepository>();
-builder.Services.AddScoped<IRepository<Issue>, IssueRepository>();
+builder.Services.AddScoped<IRepository00017037<Comment00017037>, CommentRepository00017037>();
+builder.Services.AddScoped<IRepository00017037<Issue>, IssueRepository00017037>();
 
 builder.Services.AddCors(options =>
 {

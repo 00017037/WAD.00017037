@@ -4,11 +4,11 @@ using WAD_Coursework_00017037.Models;
 
 namespace WAD_Coursework_00017037.Controllers
 {
-    public class HomeController : Controller
+    public class Home00017037Controller : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<Home00017037Controller> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public Home00017037Controller(ILogger<Home00017037Controller> logger)
         {
             _logger = logger;
         }

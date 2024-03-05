@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WAD_Coursework_00017037.Models
 {
-    public class Comment
+    public class Comment00017037
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

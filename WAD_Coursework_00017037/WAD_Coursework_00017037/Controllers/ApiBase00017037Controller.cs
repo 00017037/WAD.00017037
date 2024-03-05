@@ -5,7 +5,7 @@ namespace WAD_Coursework_00017037.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class ApiBaseController : ControllerBase
+    public class ApiBase00017037Controller : ControllerBase
     {
     }
 }

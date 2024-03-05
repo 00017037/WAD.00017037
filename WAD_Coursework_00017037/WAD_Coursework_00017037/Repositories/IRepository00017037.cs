@@ -1,6 +1,6 @@
 ﻿namespace WAD_Coursework_00017037.Repositories
 {
-    public interface IRepository<T>
+    public interface IRepository00017037<T>
     {
         Task<IEnumerable<T>> GetAllAsync();
         Task<T> GetByIDAsync(int id);

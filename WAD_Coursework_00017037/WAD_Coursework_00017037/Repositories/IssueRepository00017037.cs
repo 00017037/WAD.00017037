@@ -6,11 +6,11 @@ using WAD_Coursework_00017037.Models;
 
 namespace WAD_Coursework_00017037.Repositories
 {
-    public class IssueRepository : IRepository<Issue>
+    public class IssueRepository00017037 : IRepository00017037<Issue>
     {
         private readonly GeneralDBContext _context;
 
-        public IssueRepository(GeneralDBContext context)
+        public IssueRepository00017037(GeneralDBContext context)
         {
             _context = context;
         }

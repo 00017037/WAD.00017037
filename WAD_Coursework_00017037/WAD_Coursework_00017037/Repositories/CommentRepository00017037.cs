@@ -4,16 +4,16 @@ using WAD_Coursework_00017037.Models;
 
 namespace WAD_Coursework_00017037.Repositories
 {
-    public class CommentRepository:IRepository<Comment>
+    public class CommentRepository00017037:IRepository00017037<Comment00017037>
     {
         private readonly GeneralDBContext _context;
 
-        public CommentRepository(GeneralDBContext context)
+        public CommentRepository00017037(GeneralDBContext context)
         {
             _context = context;
         }
 
-        public async Task<Comment> AddAsync(Comment comment)
+        public async Task<Comment00017037> AddAsync(Comment00017037 comment)
         {
             _context.Comments.Add(comment);
             await _context.SaveChangesAsync();
@@ -30,17 +30,17 @@ namespace WAD_Coursework_00017037.Repositories
             }
         }
 
-        public async Task<IEnumerable<Comment>> GetAllAsync()
+        public async Task<IEnumerable<Comment00017037>> GetAllAsync()
         {
             return await _context.Comments.ToListAsync();
         }
 
-        public async Task<Comment> GetByIDAsync(int id)
+        public async Task<Comment00017037> GetByIDAsync(int id)
         {
             return await _context.Comments.FindAsync(id);
         }
 
-        public async Task<Comment> UpdateAsync(Comment comment)
+        public async Task<Comment00017037> UpdateAsync(Comment00017037 comment)
         {
             _context.Entry(comment).State = EntityState.Modified;
             await _context.SaveChangesAsync();

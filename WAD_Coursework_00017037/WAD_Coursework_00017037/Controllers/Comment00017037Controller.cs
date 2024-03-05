@@ -5,11 +5,11 @@ using WAD_Coursework_00017037.Repositories;
 namespace WAD_Coursework_00017037.Controllers
 {
    
-    public class CommentController : ApiBaseController
+    public class Comment00017037Controller : ApiBase00017037Controller
     {
-        private readonly IRepository<Comment> _commentRepository;
+        private readonly IRepository00017037<Comment00017037> _commentRepository;
 
-        public CommentController(IRepository<Comment> commentRepository)
+        public Comment00017037Controller(IRepository00017037<Comment00017037> commentRepository)
         {
             _commentRepository = commentRepository;
         }
@@ -31,10 +31,10 @@ namespace WAD_Coursework_00017037.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Comment comment)
+        public async Task<IActionResult> Create(Comment00017037 comment)
         {
             // Create a new Comment object with only IssueId and Text
-            var newComment = new Comment
+            var newComment = new Comment00017037
             {
                 IssueId = comment.IssueId,
                 Text = comment.Text
@@ -45,7 +45,7 @@ namespace WAD_Coursework_00017037.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, Comment updatedComment)
+        public async Task<IActionResult> Update(int id, Comment00017037 updatedComment)
         {
             var existingComment = await _commentRepository.GetByIDAsync(id);
             if (existingComment == null)

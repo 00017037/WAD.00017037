@@ -5,11 +5,11 @@ using WAD_Coursework_00017037.Repositories;
 namespace WAD_Coursework_00017037.Controllers
 {
   
-    public class IssueController : ApiBaseController
+    public class Issue00017037Controller : ApiBase00017037Controller
     {
-        private readonly IRepository<Issue> _issueRepository;
+        private readonly IRepository00017037<Issue> _issueRepository;
 
-        public IssueController(IRepository<Issue> issueRepository)
+        public Issue00017037Controller(IRepository00017037<Issue> issueRepository)
         {
             _issueRepository = issueRepository;
         }
