@@ -5,7 +5,7 @@
 namespace WAD_Coursework_00017037.Migrations
 {
     /// <inheritdoc />
-    public partial class init3 : Migration
+    public partial class IssueForeignKey42 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

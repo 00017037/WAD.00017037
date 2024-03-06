@@ -6,7 +6,7 @@ using WAD_Coursework_00017037.Models;
 
 namespace WAD_Coursework_00017037.Repositories
 {
-    public class IssueRepository00017037 : IRepository00017037<Issue>
+    public class IssueRepository00017037 : IRepository00017037<Issue00017037>
     {
         private readonly GeneralDBContext _context;
 
@@ -15,7 +15,7 @@ namespace WAD_Coursework_00017037.Repositories
             _context = context;
         }
 
-        public async Task<Issue> AddAsync(Issue issue)
+        public async Task<Issue00017037> AddAsync(Issue00017037 issue)
         {
             _context.Issues.Add(issue);
             await _context.SaveChangesAsync();
@@ -37,18 +37,18 @@ namespace WAD_Coursework_00017037.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Issue>> GetAllAsync()
+        public async Task<IEnumerable<Issue00017037>> GetAllAsync()
         {
             return await _context.Issues.Include(issue => issue.Comments).ToListAsync();
         }
-        public async Task<Issue> GetByIDAsync(int id)
+        public async Task<Issue00017037> GetByIDAsync(int id)
         {
             return await _context.Issues
                           .Include(issue => issue.Comments)
                           .FirstOrDefaultAsync(issue => issue.Id == id);
         }
 
-        public async Task<Issue> UpdateAsync(Issue issue)
+        public async Task<Issue00017037> UpdateAsync(Issue00017037 issue)
         {
             _context.Entry(issue).State = EntityState.Modified;
             await _context.SaveChangesAsync();

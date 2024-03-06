@@ -12,8 +12,8 @@ using WAD_Coursework_00017037.Data;
 namespace WAD_Coursework_00017037.Migrations
 {
     [DbContext(typeof(GeneralDBContext))]
-    [Migration("20240219171059_first")]
-    partial class first
+    [Migration("20240306170515_IssueForeignKey422143")]
+    partial class IssueForeignKey422143
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,7 @@ namespace WAD_Coursework_00017037.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("WAD_Coursework_00017037.Models.Comment", b =>
+            modelBuilder.Entity("WAD_Coursework_00017037.Models.Comment00017037", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -50,7 +50,7 @@ namespace WAD_Coursework_00017037.Migrations
                     b.ToTable("Comments");
                 });
 
-            modelBuilder.Entity("WAD_Coursework_00017037.Models.Issue", b =>
+            modelBuilder.Entity("WAD_Coursework_00017037.Models.Issue00017037", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -77,9 +77,9 @@ namespace WAD_Coursework_00017037.Migrations
                     b.ToTable("Issues");
                 });
 
-            modelBuilder.Entity("WAD_Coursework_00017037.Models.Comment", b =>
+            modelBuilder.Entity("WAD_Coursework_00017037.Models.Comment00017037", b =>
                 {
-                    b.HasOne("WAD_Coursework_00017037.Models.Issue", "Issue")
+                    b.HasOne("WAD_Coursework_00017037.Models.Issue00017037", "Issue")
                         .WithMany("Comments")
                         .HasForeignKey("IssueId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -88,7 +88,7 @@ namespace WAD_Coursework_00017037.Migrations
                     b.Navigation("Issue");
                 });
 
-            modelBuilder.Entity("WAD_Coursework_00017037.Models.Issue", b =>
+            modelBuilder.Entity("WAD_Coursework_00017037.Models.Issue00017037", b =>
                 {
                     b.Navigation("Comments");
                 });

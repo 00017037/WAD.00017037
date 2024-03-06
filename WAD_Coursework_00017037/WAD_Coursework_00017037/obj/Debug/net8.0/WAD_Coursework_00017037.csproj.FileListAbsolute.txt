@@ -123,7 +123,6 @@ C:\Users\botir\OneDrive\Рабочий стол\WAD.00017037\WAD_Coursework_0001
 C:\Users\botir\OneDrive\Рабочий стол\WAD.00017037\WAD_Coursework_00017037\WAD_Coursework_00017037\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\botir\OneDrive\Рабочий стол\WAD.00017037\WAD_Coursework_00017037\WAD_Coursework_00017037\obj\Debug\net8.0\scopedcss\bundle\WAD_Coursework_00017037.styles.css
 C:\Users\botir\OneDrive\Рабочий стол\WAD.00017037\WAD_Coursework_00017037\WAD_Coursework_00017037\obj\Debug\net8.0\scopedcss\projectbundle\WAD_Coursework_00017037.bundle.scp.css
-C:\Users\botir\OneDrive\Рабочий стол\WAD.00017037\WAD_Coursework_00017037\WAD_Coursework_00017037\obj\Debug\net8.0\WAD_Coursework_00017037.csproj.CopyComplete
 C:\Users\botir\OneDrive\Рабочий стол\WAD.00017037\WAD_Coursework_00017037\WAD_Coursework_00017037\obj\Debug\net8.0\WAD_Coursework_00017037.dll
 C:\Users\botir\OneDrive\Рабочий стол\WAD.00017037\WAD_Coursework_00017037\WAD_Coursework_00017037\obj\Debug\net8.0\refint\WAD_Coursework_00017037.dll
 C:\Users\botir\OneDrive\Рабочий стол\WAD.00017037\WAD_Coursework_00017037\WAD_Coursework_00017037\obj\Debug\net8.0\WAD_Coursework_00017037.pdb
@@ -514,3 +513,7 @@ C:\Users\f_botirov\Desktop\WAD.00017037\WAD_Coursework_00017037\WAD_Coursework_0
 C:\Users\f_botirov\Desktop\WAD.00017037\WAD_Coursework_00017037\WAD_Coursework_00017037\obj\Debug\net8.0\WAD_Coursework_00017037.genruntimeconfig.cache
 C:\Users\f_botirov\Desktop\WAD.00017037\WAD_Coursework_00017037\WAD_Coursework_00017037\obj\Debug\net8.0\ref\WAD_Coursework_00017037.dll
 C:\Users\botir\OneDrive\Рабочий стол\WAD.00017037\WAD_Coursework_00017037\WAD_Coursework_00017037\obj\Debug\net8.0\WAD_Coursework_00017037.sourcelink.json
+C:\Users\botir\OneDrive\Рабочий стол\WAD.00017037\WAD_Coursework_00017037\WAD_Coursework_00017037\obj\Debug\net8.0\WAD_Cour.F566E2E0.Up2Date
+C:\Users\botir\OneDrive\Рабочий стол\WAD.00017037\WAD_Coursework_00017037\WAD_Coursework_00017037\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\botir\OneDrive\Рабочий стол\WAD.00017037\WAD_Coursework_00017037\WAD_Coursework_00017037\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\botir\OneDrive\Рабочий стол\WAD.00017037\WAD_Coursework_00017037\WAD_Coursework_00017037\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll

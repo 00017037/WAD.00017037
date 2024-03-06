@@ -7,6 +7,6 @@ namespace WAD_Coursework_00017037.Data
     {
         public GeneralDBContext(DbContextOptions<GeneralDBContext> options) : base(options) { }
         public DbSet<Comment00017037> Comments { get; set; }
-        public DbSet<Issue> Issues { get; set; }
+        public DbSet<Issue00017037> Issues { get; set; }
     }
 }

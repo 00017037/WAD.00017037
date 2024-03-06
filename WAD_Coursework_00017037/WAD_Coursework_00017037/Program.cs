@@ -5,11 +5,14 @@ using Microsoft.OpenApi.Models;
 using WAD_Coursework_00017037.Data;
 using WAD_Coursework_00017037.Models;
 using WAD_Coursework_00017037.Repositories;
+using Newtonsoft;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddNewtonsoftJson(options =>
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -22,7 +25,7 @@ builder.Services.AddDbContext<GeneralDBContext>(options =>
 
 
 builder.Services.AddScoped<IRepository00017037<Comment00017037>, CommentRepository00017037>();
-builder.Services.AddScoped<IRepository00017037<Issue>, IssueRepository00017037>();
+builder.Services.AddScoped<IRepository00017037<Issue00017037>, IssueRepository00017037>();
 
 builder.Services.AddCors(options =>
 {

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WAD_Coursework_00017037.Models
 {
-    public class Issue
+    public class Issue00017037
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

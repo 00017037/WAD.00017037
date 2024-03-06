@@ -7,9 +7,9 @@ namespace WAD_Coursework_00017037.Controllers
   
     public class Issue00017037Controller : ApiBase00017037Controller
     {
-        private readonly IRepository00017037<Issue> _issueRepository;
+        private readonly IRepository00017037<Issue00017037> _issueRepository;
 
-        public Issue00017037Controller(IRepository00017037<Issue> issueRepository)
+        public Issue00017037Controller(IRepository00017037<Issue00017037> issueRepository)
         {
             _issueRepository = issueRepository;
         }
@@ -31,14 +31,14 @@ namespace WAD_Coursework_00017037.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Issue issue)
+        public async Task<IActionResult> Create(Issue00017037 issue)
         {
             await _issueRepository.AddAsync(issue);
             return CreatedAtAction(nameof(GetById), new { id = issue.Id }, issue);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, Issue issue)
+        public async Task<IActionResult> Update(int id, Issue00017037 issue)
         {
             if (id != issue.Id)
                 return BadRequest();

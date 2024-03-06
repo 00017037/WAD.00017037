@@ -1,24 +1,24 @@
 [
   {
-    "ContainingType": "WAD_Coursework_00017037.Controllers.CommentController",
+    "ContainingType": "WAD_Coursework_00017037.Controllers.Comment00017037Controller",
     "Method": "Create",
-    "RelativePath": "api/Comment/Create",
+    "RelativePath": "api/Comment00017037/Create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "comment",
-        "Type": "WAD_Coursework_00017037.Models.Comment",
+        "Type": "WAD_Coursework_00017037.Models.Comment00017037",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WAD_Coursework_00017037.Controllers.CommentController",
+    "ContainingType": "WAD_Coursework_00017037.Controllers.Comment00017037Controller",
     "Method": "Delete",
-    "RelativePath": "api/Comment/Delete/{id}",
+    "RelativePath": "api/Comment00017037/Delete/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -32,9 +32,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WAD_Coursework_00017037.Controllers.CommentController",
+    "ContainingType": "WAD_Coursework_00017037.Controllers.Comment00017037Controller",
     "Method": "GetAll",
-    "RelativePath": "api/Comment/GetAll",
+    "RelativePath": "api/Comment00017037/GetAll",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -42,9 +42,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WAD_Coursework_00017037.Controllers.CommentController",
+    "ContainingType": "WAD_Coursework_00017037.Controllers.Comment00017037Controller",
     "Method": "GetById",
-    "RelativePath": "api/Comment/GetById/{id}",
+    "RelativePath": "api/Comment00017037/GetById/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -58,9 +58,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WAD_Coursework_00017037.Controllers.CommentController",
+    "ContainingType": "WAD_Coursework_00017037.Controllers.Comment00017037Controller",
     "Method": "Update",
-    "RelativePath": "api/Comment/Update/{id}",
+    "RelativePath": "api/Comment00017037/Update/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -71,33 +71,33 @@
         "IsRequired": true
       },
       {
-        "Name": "comment",
-        "Type": "WAD_Coursework_00017037.Models.Comment",
+        "Name": "updatedComment",
+        "Type": "WAD_Coursework_00017037.Models.Comment00017037",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WAD_Coursework_00017037.Controllers.IssueController",
+    "ContainingType": "WAD_Coursework_00017037.Controllers.Issue00017037Controller",
     "Method": "Create",
-    "RelativePath": "api/Issue/Create",
+    "RelativePath": "api/Issue00017037/Create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "issue",
-        "Type": "WAD_Coursework_00017037.Models.Issue",
+        "Type": "WAD_Coursework_00017037.Models.Issue00017037",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WAD_Coursework_00017037.Controllers.IssueController",
+    "ContainingType": "WAD_Coursework_00017037.Controllers.Issue00017037Controller",
     "Method": "Delete",
-    "RelativePath": "api/Issue/Delete/{id}",
+    "RelativePath": "api/Issue00017037/Delete/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -111,9 +111,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WAD_Coursework_00017037.Controllers.IssueController",
+    "ContainingType": "WAD_Coursework_00017037.Controllers.Issue00017037Controller",
     "Method": "GetAll",
-    "RelativePath": "api/Issue/GetAll",
+    "RelativePath": "api/Issue00017037/GetAll",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -121,9 +121,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WAD_Coursework_00017037.Controllers.IssueController",
+    "ContainingType": "WAD_Coursework_00017037.Controllers.Issue00017037Controller",
     "Method": "GetById",
-    "RelativePath": "api/Issue/GetById/{id}",
+    "RelativePath": "api/Issue00017037/GetById/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -137,9 +137,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WAD_Coursework_00017037.Controllers.IssueController",
+    "ContainingType": "WAD_Coursework_00017037.Controllers.Issue00017037Controller",
     "Method": "Update",
-    "RelativePath": "api/Issue/Update/{id}",
+    "RelativePath": "api/Issue00017037/Update/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -151,7 +151,7 @@
       },
       {
         "Name": "issue",
-        "Type": "WAD_Coursework_00017037.Models.Issue",
+        "Type": "WAD_Coursework_00017037.Models.Issue00017037",
         "IsRequired": true
       }
     ],
