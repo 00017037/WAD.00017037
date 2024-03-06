@@ -18,3 +18,4 @@ This project is developed as part of the coursework requirements. It implements 
 - Entity Framework Core.Design, Microsoft.EntityFrameworkCore.SqlServer, and EntityFrameworkCore.Tools: These libraries support database schema migrations, design, and management.
 - VisualStudio.Web.CodeGeneration.Design: Facilitates scaffolding of the application.
 - Swashbuckle.AspNetCore: Implements Swagger for API documentation and testing.
+  -ApsNetCore.MVC.NewtonsoftJson for serializing the json
