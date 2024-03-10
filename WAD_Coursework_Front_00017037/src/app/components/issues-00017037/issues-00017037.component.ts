@@ -25,7 +25,7 @@ import { IssueForm00017037Component } from '../issue-form-00017037/issue-form-00
   styleUrl: './issues-00017037.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class IssuesComponent {
+export class Issues00017037Component {
   updateIssuesAction$ = new BehaviorSubject(true);
 
   issues$: Observable<IIssue[]> = this.updateIssuesAction$.pipe(

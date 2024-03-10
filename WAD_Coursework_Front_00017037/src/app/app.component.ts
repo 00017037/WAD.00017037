@@ -4,7 +4,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { Header00017037Component } from './components/header-00017037/header-00017037.component';
 import { Footer00017037Component } from './components/footer-00017037/footer-00017037.component';
 import { IssueDetails00017037Component } from './components/issue-details-00017037/issue-details-00017037.component';
-import { IssuesComponent } from './components/issues-00017037/issues-00017037.component';
+import { Issues00017037Component } from './components/issues-00017037/issues-00017037.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @Component({
@@ -16,7 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     Header00017037Component,
     Footer00017037Component,
     IssueDetails00017037Component,
-    IssuesComponent,
+    IssueDetails00017037Component,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

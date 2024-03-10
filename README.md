@@ -19,3 +19,11 @@ This project is developed as part of the coursework requirements. It implements 
 - VisualStudio.Web.CodeGeneration.Design: Facilitates scaffolding of the application.
 - Swashbuckle.AspNetCore: Implements Swagger for API documentation and testing.
   -ApsNetCore.MVC.NewtonsoftJson for serializing the json
+
+## Github History Screenshots
+
+- ![inital commit](image.png)
+
+- ![commit to repo](image-1.png)
+
+- ![last commit](image-2.png)
