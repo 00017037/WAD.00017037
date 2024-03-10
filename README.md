@@ -22,8 +22,11 @@ This project is developed as part of the coursework requirements. It implements 
 
 ## Github History Screenshots
 
-- ![inital commit](image.png)
+- Initial Commit
+  ![inital commit](image.png)
 
-- ![commit to repo](image-1.png)
+- Middle
+ ![commit to repo](image-1.png)
 
-- ![last commit](image-2.png)
+- Last
+ ![last commit](image-2.png)
