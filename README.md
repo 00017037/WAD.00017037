@@ -2,6 +2,13 @@
 
 This project is developed as part of the coursework requirements. It implements an Issue Tracker system, designed to help users report and track issues within a project or organization.
 
+
+## Run the application
+- 1) go to WAD_Coursework_00017037 and run the backend
+- 2)got to WAD_Coursework_Front_00017037
+- -3) npm i
+- 4) ng serve
+
 ## Student ID and Topic Selection
 
 - Student ID: 00017037
