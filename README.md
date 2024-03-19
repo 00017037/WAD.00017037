@@ -4,10 +4,10 @@ This project is developed as part of the coursework requirements. It implements 
 
 
 ## Run the application
-- 1) go to WAD_Coursework_00017037 and run the backend
-- 2)got to WAD_Coursework_Front_00017037
-- -3) npm i
-- 4) ng serve
+-  go to WAD_Coursework_00017037 and run the backend
+- got to WAD_Coursework_Front_00017037
+-  npm i
+-  ng serve
 
 ## Student ID and Topic Selection
 
